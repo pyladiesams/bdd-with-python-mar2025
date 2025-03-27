@@ -16,4 +16,4 @@ dev-dependencies = [
 ]
 
 [tool.ruff]
-ignore = ["F811"]
+lint.ignore = ["F811"]
