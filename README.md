@@ -8,30 +8,40 @@ This workshop introduces Behavior-Driven Development (BDD) in Python using behav
 BDD bridges the gap between developers, testers, and stakeholders by encouraging collaboration, promoting clean, well-tested code, and making test cases more meaningful and maintainable.
 
 ## Requirements
-* PyLadies Amsterdam uses [uv](https://docs.astral.sh/uv/) for dependency management
-* Google account if you want to use [Google Colab](https://colab.research.google.com/)
+* Python>=3.8
  
 ## Usage
-### with uv
-Run the following code:
+1. Start by cloning the repo:
 ```bash
 git clone <github-url-of-workshop-repo>
 cd <name-of-repo>
+```
 
-# create and activate venv, install dependencies
-uv sync
-```
-### with Google collab
-1. Visit [Google Colab](https://colab.research.google.com/)
-2. In the top left corner select "File" &#8594; "Open Notebook"
-3. Under "GitHub", enter the URL of the repo of this workshop
-4. Select one of the notebooks within the repo.
-5. At the top of the notebook, add a Code cell and run the following code:
+Inside the repo folder, you can then create a virtual environment and install dependencies in your preferred way.
+
+### With UV
 ```bash
-!git clone <github-url-of-workshop-repo>
-%cd <name-of-repo>
-!pip install -r requirements.txt
+uv venv -p 3.8
+uv lock # (optional)
+uv sync --all-extras
+source .venv/bin/activate # Or via IDE
 ```
+
+### With venv
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+You can test that the setup was successful by running
+```bash
+behave -q -o test.txt solutions/features 
+rm test.txt 
+```
+###### Writing to text file instead of stdout to prevent spoilers.
+
+If everything went well, you should see `3 features passed, 0 failed, 0 skipped`, followed by more lines.
 
 ## Video record
 Re-watch [this YouTube stream](https://www.youtube.com/watch?v=TynFKyY7wCQ)
