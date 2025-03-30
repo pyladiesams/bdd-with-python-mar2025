@@ -8,7 +8,7 @@ This workshop introduces Behavior-Driven Development (BDD) in Python using behav
 BDD bridges the gap between developers, testers, and stakeholders by encouraging collaboration, promoting clean, well-tested code, and making test cases more meaningful and maintainable.
 
 ## Requirements
-* Python>=3.8
+* [Python>=3.8](https://www.python.org/downloads/release/python-380/)
  
 ## Usage
 1. Start by cloning the repo:
