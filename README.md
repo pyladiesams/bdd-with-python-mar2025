@@ -1,50 +1,51 @@
 
-# { WORKSHOP NAME } 
-### Presentation: [{ YOUR PRESENTATION NAME }](workshop/presentation_template.pdf)
+# BDD with Python 
+### Presentation: [Introduction to BDD in Python](https://docs.google.com/presentation/d/1t8gkZ9HH19cT_fM4AAfu3gPutuJZXZ2U1twyL3JOwhc)
 
 ## Workshop description
-Describe why your topic is important and what you want to share with your audience
+This workshop introduces Behavior-Driven Development (BDD) in Python using behave and pytest-bdd. BDD helps teams write tests that are easy to understand and closely aligned with business requirements by using Given-When-Then scenarios in plain language.
+
+BDD bridges the gap between developers, testers, and stakeholders by encouraging collaboration, promoting clean, well-tested code, and making test cases more meaningful and maintainable.
 
 ## Requirements
-* PyLadies Amsterdam uses [uv](https://docs.astral.sh/uv/) for dependency management
-* Google account if you want to use [Google Colab](https://colab.research.google.com/)
+* Python>=3.8
  
 ## Usage
-### with uv
-Run the following code:
+1. Start by cloning the repo:
 ```bash
 git clone <github-url-of-workshop-repo>
 cd <name-of-repo>
-
-# create and activate venv, install dependencies
-uv sync
 ```
-### with Google collab
-1. Visit [Google Colab](https://colab.research.google.com/)
-2. In the top left corner select "File" &#8594; "Open Notebook"
-3. Under "GitHub", enter the URL of the repo of this workshop
-4. Select one of the notebooks within the repo.
-5. At the top of the notebook, add a Code cell and run the following code:
+
+Inside the repo folder, you can then create a virtual environment and install dependencies in your preferred way.
+
+### With UV
 ```bash
-!git clone <github-url-of-workshop-repo>
-%cd <name-of-repo>
-!pip install -r requirements.txt
+uv venv -p 3.8
+uv lock # (optional)
+uv sync --all-extras
+source .venv/bin/activate # Or via IDE
 ```
-### for a workshop giver
-To get started, open the `pyproject.toml` file and set the required Python version. The pre-selected version 3.8 is generally a safe choice for most use cases.
 
-After you have specified the Python version, you can create a virtual environment with `uv venv` and add packages with `uv add <package>`. Before the workshop, you can generate a requirements.txt file, which is needed e.g. for running code in GoogleColab, by running `uv export > requirements.txt`.
+### With venv
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+You can test that the setup was successful by running
+```bash
+behave -q -o test.txt solutions/features 
+rm test.txt 
+```
+###### Writing to text file instead of stdout to prevent spoilers.
+
+If everything went well, you should see `3 features passed, 0 failed, 0 skipped`, followed by more lines.
 
 ## Video record
-Re-watch [this YouTube stream](link)
+Re-watch [this YouTube stream](https://www.youtube.com/watch?v=TynFKyY7wCQ)
 
 ## Credits
-This workshop was set up by @pyladiesams and {your GitHub handler}
+This workshop was set up by [@pyladiesams](https://github.com/pyladiesams) and [@gCaglia](https://github.com/gCaglia).
 
-
-## Appendix
-### Pre-Commit Hooks
-
-To ensure our code looks beautiful, PyLadies uses pre-commit hooks. You can enable them by running `pre-commit install`. You may have to install `pre-commit` first, using `uv sync`, `uv pip install pre-commit` or `pip install pre-commit`.
-
-Happy Coding :)
