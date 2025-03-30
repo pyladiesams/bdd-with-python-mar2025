@@ -2,6 +2,10 @@
 # BDD with Python 
 ### Presentation: [Introduction to BDD in Python](https://docs.google.com/presentation/d/1t8gkZ9HH19cT_fM4AAfu3gPutuJZXZ2U1twyL3JOwhc)
 
+## Offline Slides
+- [PDF Version](./20250331%20Introduction%20to%20BDD%20in%20Python.pdf)
+- [PowerPoint Version](./20250331%20Introduction%20to%20BDD%20in%20Python.pptx)
+
 ## Workshop description
 This workshop introduces Behavior-Driven Development (BDD) in Python using behave and pytest-bdd. BDD helps teams write tests that are easy to understand and closely aligned with business requirements by using Given-When-Then scenarios in plain language.
 
@@ -44,7 +48,7 @@ rm test.txt
 If everything went well, you should see `3 features passed, 0 failed, 0 skipped`, followed by more lines.
 
 ## Video record
-Re-watch [this YouTube stream](https://www.youtube.com/watch?v=TynFKyY7wCQ)
+Re-watch [this YouTube stream](https://www.youtube.com/watch?v=TynFKyY7wCQ).
 
 ## Credits
 This workshop was set up by [@pyladiesams](https://github.com/pyladiesams) and [@gCaglia](https://github.com/gCaglia).
