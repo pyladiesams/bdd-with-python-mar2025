@@ -1,10 +1,6 @@
 
 # BDD with Python 
-### Presentation: [Introduction to BDD in Python](https://docs.google.com/presentation/d/1t8gkZ9HH19cT_fM4AAfu3gPutuJZXZ2U1twyL3JOwhc)
-
-## Offline Slides
-- [PDF Version](./20250331%20Introduction%20to%20BDD%20in%20Python.pdf)
-- [PowerPoint Version](./20250331%20Introduction%20to%20BDD%20in%20Python.pptx)
+### Presentation: [Introduction to BDD in Python](./20250331%20Introduction%20to%20BDD%20in%20Python.pdf)
 
 ## Workshop description
 This workshop introduces Behavior-Driven Development (BDD) in Python using behave and pytest-bdd. BDD helps teams write tests that are easy to understand and closely aligned with business requirements by using Given-When-Then scenarios in plain language.
